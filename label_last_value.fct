@@ -1,0 +1,10 @@
+# input:
+# from
+# to
+# last_value
+# max_y
+
+set y2tics (sprintf(last_value_format, last_value) last_value)
+set xrange [from:to]
+set yrange [0:max_y*1.1]
+set y2range [0:max_y*1.1] 
