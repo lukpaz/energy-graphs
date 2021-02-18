@@ -12,7 +12,7 @@ stats datafile using 1:(100*$2*1000/$4/24/365) nooutput
 max_y = STATS_max_y
 stats datafile using (last_value=100*$2*1000/$4/24/365) every ::STATS_records::STATS_records nooutput
 
-to = 2018
+to = 2019
 last_value_format = "%2.2f %%%%"
 call "label_last_value.fct
 
