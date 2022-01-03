@@ -1,6 +1,7 @@
 #input params:
 # * source
 # * from
+# * to
 
 set terminal svg size 800,500
 set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"white" behind
@@ -13,7 +14,6 @@ max_y = STATS_max_y
 stats datafile using (last_value=$4) every ::STATS_records::STATS_records nooutput
 
 last_value_format = "%d MW"
-to = 2019
 call "label_last_value.fct
 
 set grid

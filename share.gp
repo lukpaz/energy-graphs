@@ -1,6 +1,7 @@
 #input params:
 # * source
 # * from
+# * to
 
 set terminal svg size 800,500
 set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"white" behind
@@ -12,7 +13,6 @@ stats datafile using 1:($2/$3*100) nooutput
 max_y = STATS_max_y
 stats datafile using (last_value=$2/$3*100) every ::STATS_records::STATS_records nooutput
 
-to = 2019
 last_value_format = "%2.2f %%%%"
 call "label_last_value.fct
 
